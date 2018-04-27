@@ -1,0 +1,168 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.camel.example</groupId>
+	<artifactId>spring-boot-camel-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-boot-camel-example</name>
+	<description>Camel with Spring Boot Example</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring-boot-starter</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-servlet</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-swagger</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-http -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http4</artifactId>
+			<version>2.20.1</version>
+			<!-- use the same version as your Camel core version -->
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/xom/xom -->
+		<dependency>
+			<groupId>xom</groupId>
+			<artifactId>xom</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-xmljson</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-xstream</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+			<version>2.20.1</version>
+		</dependency>
+
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.felix</groupId> <artifactId>maven-bundle-plugin</artifactId> 
+				<extensions>true</extensions> <version>2.4.0</version> </plugin> <plugin> 
+				<groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
+				<version>3.1</version> </plugin> -->
+		</plugins>
+
+	</build>
+
+
+	<!-- <dependencies> <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-servlet-starter</artifactId> 
+		<version>${camel.version}</version> </dependency> <dependency> <groupId>org.apache.camel</groupId> 
+		<artifactId>camel-jackson-starter</artifactId> <version>${camel.version}</version> 
+		</dependency> <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-swagger-java-starter</artifactId> 
+		<version>${camel.version}</version> </dependency> <dependency> <groupId>org.apache.camel</groupId> 
+		<artifactId>camel-spring-boot-starter</artifactId> <version>${camel.version}</version> 
+		</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> 
+		<version>${spring-boot-starter.version}</version> </dependency> <dependency> 
+		<groupId>org.apache.camel</groupId> <artifactId>camel-swagger</artifactId> 
+		<version>${camel.version}</version> </dependency> <dependency> <groupId>com.googlecode.json-simple</groupId> 
+		<artifactId>json-simple</artifactId> <version>1.1</version> </dependency> 
+		https://mvnrepository.com/artifact/org.apache.camel/camel-http <dependency> 
+		<groupId>org.apache.camel</groupId> <artifactId>camel-http</artifactId> <version>2.20.1</version> 
+		</dependency> https://mvnrepository.com/artifact/xom/xom <dependency> <groupId>xom</groupId> 
+		<artifactId>xom</artifactId> <version>1.2.5</version> </dependency> </dependencies> 
+		<build> <defaultGoal>spring-boot:run</defaultGoal> <plugins> <plugin> <artifactId>maven-compiler-plugin</artifactId> 
+		<version>${maven-compiler-plugin.version}</version> <configuration> <source>1.8</source> 
+		<target>1.8</target> </configuration> </plugin> <plugin> <groupId>org.springframework.boot</groupId> 
+		<artifactId>spring-boot-maven-plugin</artifactId> <version>${spring-boot-starter.version}</version> 
+		<executions> <execution> <goals> <goal>repackage</goal> </goals> </execution> 
+		</executions> </plugin> </plugins> </build> <properties> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version> <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version> 
+		<camel.version>2.19.1</camel.version> <spring-boot-starter.version>1.5.4.RELEASE</spring-boot-starter.version> 
+		</properties> -->
+
+</project>
